@@ -3,7 +3,7 @@
 
 React.hiccup is a complete replacement for [React](http://facebook.github.io/react/) under the form of a [sweet.js](http://sweetjs.org) macro.
 
-Dig React but can't take JSX? React.hiccup to the rescue.
+Dig React but JSX feels funny? React.hiccup to the rescue!
 
 
 ## Syntax
@@ -19,7 +19,8 @@ hiccup [tag#id.class1.class2 {attributes} child1 child2 ...]
 e.g.
 
 ```js
-hiccup [div#foo.bar.baz {some: "property", another: this.props.property} [p "A child element"] "Child text"]
+hiccup [div#foo.bar.baz {some: "property", another: this.props.property} 
+         [p "A child element"] "Child text"]
 ```
 
 where the id, classes, attributes and children are all optional. The className can be also specified 
@@ -115,7 +116,7 @@ written using React.hiccup.
 
 #### A Simple Component
 
-JSX:
+JSX
 
 ```js
 /** @jsx React.DOM */
@@ -128,7 +129,7 @@ var HelloMessage = React.createClass({
 React.renderComponent(<HelloMessage name="John" />, mountNode);
 ```
 
-React.hiccup:
+React.hiccup
 
 ```js
 var HelloMessage = React.createClass({
@@ -206,7 +207,7 @@ React.renderComponent(hiccup [Timer], mountNode);
 
 #### An Application
 
-JSX: 
+JSX 
 
 ```js
 /** @jsx React.DOM */
@@ -286,7 +287,7 @@ React.renderComponent(hiccup [TodoApp], mountNode);
 
 #### A Component Using External Plugins
 
-JSX: 
+JSX 
 
 ```js
 /** @jsx React.DOM */
@@ -323,7 +324,7 @@ var MarkdownEditor = React.createClass({
 React.renderComponent(<MarkdownEditor />, mountNode);
 ```
 
-React.hiccup:
+React.hiccup
 
 ```js
 
