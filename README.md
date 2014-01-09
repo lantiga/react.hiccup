@@ -1,5 +1,7 @@
 
-# React.hiccup: React 0% JSX, 100% hiccup
+# React.hiccup
+
+**React 0% JSX, 100% hiccup**
 
 React.hiccup is a complete replacement for [React](http://facebook.github.io/react/) under the form of a [sweet.js](http://sweetjs.org) macro.
 
