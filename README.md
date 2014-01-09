@@ -252,7 +252,7 @@ React.renderComponent(<TodoApp />, mountNode);
 
 React.hiccup
 
-```
+```js
 rclass TodoList = {
   render: function() {
     var createItem = function(itemText) {
