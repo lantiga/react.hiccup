@@ -369,8 +369,8 @@ React.renderComponent(hiccup [MarkdownEditor], mountNode);
 
 For something more involved you can take a look at the [React tutorial](http://facebook.github.io/react/docs/tutorial.html).
 
-Here's the code in [JSX](https://raw2.github.com/lantiga/react.hiccup/master/tutorial/tutorial.jsx), and
-here's the same code in [React.hiccup](https://raw2.github.com/lantiga/react.hiccup/master/tutorial/tutorial.jsx).
+Here's the code in [JSX](https://github.com/lantiga/react.hiccup/blob/master/react_tutorial/tutorial.jsx), and
+here's the same code in [React.hiccup](https://github.com/lantiga/react.hiccup/blob/master/react_tutorial/tutorial.sjs).
 
 ## License
 
