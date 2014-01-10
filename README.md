@@ -113,11 +113,9 @@ All set. Now to compile a React.hiccup js file into a plain js file do
 
     $ sjs -m ./react_hiccup.sjs -o foo_build.js foo.js
 
-To watch the file and have it automatically compiled at every change
+To watch the file and have it automatically compiled whenever the file changes on disk
 
     $ sjs -m ./react_hiccup.sjs -o foo_build.js -w foo.js
-
-(this appears to be currently broken in sweet.js)
 
 
 ## Examples
