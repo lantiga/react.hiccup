@@ -41,7 +41,7 @@ macro _tag {
 
 macro _args {
 
-  case { _ $x ... } => { 
+  case { $name $x ... } => { 
 
     var tokens = #{$x ...}.map(function(el) { return unwrapSyntax(el); });
 
@@ -65,8 +65,8 @@ macro _args {
       offset += 1;
     }
 
-    letstx $id = [makeValue(id)], 
-           $c = [makeValue(className)];
+    letstx $id = [makeValue(id,#{$name})], 
+           $c = [makeValue(className,#{$id})];
 
     var children = #{$x ...}.slice(offset);
     letstx $children ... = children;
@@ -114,11 +114,11 @@ macro _args {
       hmap.token.inner[classNameIndex].token.value += className;
     }
     else if (className != "") {
-      hmap.token.inner = hmap.token.inner.concat([makePunc(','),makeIdent("className"),makePunc(":"),makeValue(className)]);
+      hmap.token.inner = hmap.token.inner.concat([makePunc(',',#{$c}),makeIdent("className",#{$c}),makePunc(":",#{$c}),makeValue(className,#{$c})]);
     }
   
     if (id != "") {
-      hmap.token.inner = hmap.token.inner.concat([makePunc(','),makeIdent("id"),makePunc(":"),makeValue(id)]);
+      hmap.token.inner = hmap.token.inner.concat([makePunc(',',#{$id}),makeIdent("id",#{$id}),makePunc(":",#{$id}),makeValue(id,#{$id})]);
     }
 
     letstx $hmap = [hmap];
