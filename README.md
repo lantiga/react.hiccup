@@ -15,18 +15,18 @@ React.hiccup syntax is heavily inspired by [hiccup](https://github.com/weavejest
 In short, the syntax for a React.hiccup element is
 
 ```js
-hiccup [tag#id.class1.class2 {attributes} child1 child2 ...]
+hiccup [tag#id.class1.class2 {property1: value1, property2: value2} child1 child2 ...]
 ```
 
 e.g.
 
 ```js
-hiccup [div#foo.bar.baz {some: "property", another: this.props.property} 
+hiccup [div#foo.bar.baz {some: "property", another: this.props.anothervalue} 
          [p "A child element"] "Child text"]
 ```
 
-where the id, classes, attributes and children are all optional. The className can be also specified 
-among the attributes, in this case it will be merged with the class names given after the tag.
+where the id, classes, property object and children are all optional. The className can be also specified 
+among the properties, in this case it will be merged with the class names given after the tag.
 
 A child can be a variable identifier
 
@@ -50,12 +50,19 @@ var comment2 = "Second comment";
 hiccup [div#foo.bar.baz "The comment is: " (one_or_two == 1 ? comment1 : comment2 )]
 ```
 
-Note that this is not required in the attributes.
+Note that this is not required in the property object
+
+```js
+var one_or_two = 1;
+var comment1 = "First comment";
+var comment2 = "Second comment";
+hiccup [div#foo.bar.baz {someprop: 1 > 0 ? true : false, someother: "other" + "prop" } "A child"]
+```
 
 
-## Complimentary rclass macro
+## Faster react class declaration
 
-React.hiccup also comes with an optional macro for declaring a React class
+React.hiccup also comes with an optional macro `rclass` for declaring a React class
 
 ```js
 rclass FooBar = {
