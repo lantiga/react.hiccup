@@ -94,6 +94,10 @@ First install [sweet.js](http://sweetjs.org) if you don't have it already
 
     $ npm install -g sweet.js
 
+If you do have it, update it (0.4.0 is required)
+
+    $ npm update -g sweet.js
+
 Then get in your project directory
 
     $ wget https://raw2.github.com/lantiga/react.hiccup/master/react_hiccup.sjs
