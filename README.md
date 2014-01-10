@@ -62,7 +62,7 @@ hiccup [div#foo.bar.baz {someprop: 1 > 0 ? true : false, someother: "other" + "p
 ```
 
 
-## Faster react class declaration
+## Shorthand react class declaration
 
 React.hiccup also comes with an optional macro `rclass` for declaring a React class
 
