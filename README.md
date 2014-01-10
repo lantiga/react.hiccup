@@ -5,7 +5,9 @@
 
 Dig [React](http://facebook.github.io/react/) but JSX feels weird? React.hiccup to the rescue!
 
-React.hiccup is a complete replacement for JSX in written using [sweet.js](http://sweetjs.org). React.hiccup uses a very clean, minimalistic notation - no HTML tags and no curly braces within HTML elements.
+React.hiccup is a complete replacement for JSX written in [sweet.js](http://sweetjs.org). 
+
+React.hiccup uses a very clean, minimalistic notation - no HTML tags and no curly braces within HTML elements.
 
 
 ## Syntax
