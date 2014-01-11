@@ -103,21 +103,17 @@ First install [sweet.js](http://sweetjs.org) if you don't have it already
 
     $ npm install -g sweet.js
 
-If you do have it, update it (0.4.0 is required)
+Then
 
-    $ npm update -g sweet.js
-
-Then get in your project directory
-
-    $ wget https://raw2.github.com/lantiga/react.hiccup/master/react_hiccup.sjs
+    $ npm install react.hiccup
 
 All set. Now to compile a React.hiccup js file into a plain js file do
 
-    $ sjs -m ./react_hiccup.sjs -o foo_build.js foo.js
+    $ sjs -m react.hiccup/macros -o foo_build.js foo.js
 
 To watch the file and have it automatically compiled whenever the file changes on disk
 
-    $ sjs -m ./react_hiccup.sjs -o foo_build.js -w foo.js
+    $ sjs -m react.hiccup/macros -o foo_build.js -w foo.js
 
 
 ## Examples
