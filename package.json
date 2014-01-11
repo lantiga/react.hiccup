@@ -1,0 +1,21 @@
+{
+  "name": "react.hiccup",
+  "version": 0.1.0,
+  "description": "Hiccup notation for React.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lantiga/react.hiccup.git"
+  },
+  "keywords": [
+    "notation",
+    "DOM"
+    "macros",
+    "macro"
+  ],
+  "author": "Luca Antiga http://lantiga.github.io",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "sweet.js": "~0.4.0"
+  }
+}
