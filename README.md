@@ -125,7 +125,7 @@ To watch the file and have it automatically compiled whenever the file changes o
 ### React frontpage examples
 
 Here's how [React frontpage examples](http://facebook.github.io/react/) can be 
-written using React.hiccup: [React frontpage examples in React.hiccup](https://github.com/lantiga/react.hiccup/blob/master/examples.md).
+written [using React.hiccup](https://github.com/lantiga/react.hiccup/blob/master/examples.md).
 
 ### React tutorial
 
@@ -133,6 +133,7 @@ For something more involved you can take a look at the [React tutorial](http://f
 
 Here's the code in [JSX](https://github.com/lantiga/react.hiccup/blob/master/react_tutorial/tutorial.jsx), and
 here's the same code in [React.hiccup](https://github.com/lantiga/react.hiccup/blob/master/react_tutorial/tutorial.sjs).
+
 
 ## License
 
