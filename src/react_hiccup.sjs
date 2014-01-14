@@ -127,13 +127,25 @@ macro _args {
   }
 }
 
+macro _value {
+  case {_ $x} => {
+    var temp = #{$x}[0];
+    if (temp.token.type == 10) {
+      var tempString = temp.token.value.raw;
+      letstx $newTemp = [makeValue(tempString, #{x})];
+      return #{$newTemp}
+    }
+    return #{$x}
+  }
+}
+
 macro hiccup {
 
   rule { [ $t $args ... ] } => {
     _tag $t(_args $args ...) 
   }
 
-  rule { $x } => { $x }
+  rule { $x } => { _value $x }
 }
 
 macro rclass {

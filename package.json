@@ -1,6 +1,6 @@
 {
   "name": "react.hiccup",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hiccup notation for React.js",
   "repository": {
     "type": "git",

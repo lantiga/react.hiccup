@@ -30,7 +30,15 @@ hiccup [div#foo.bar.baz {some: "property", another: this.props.anothervalue}
 where the id, classes, property object and children are all optional. The className can be also specified 
 among the properties, in this case it will be merged with the class names given after the tag.
 
-A child can be a variable identifier
+A child can be a string, a number or a multiline string (use the backtick)
+```js
+hiccup [div#foo.bar.baz `This
+is a
+  multiline 
+  comment`]
+```
+
+A child can also be a JavaScript variable identifier
 
 ```js
 var comment = "Some comment";

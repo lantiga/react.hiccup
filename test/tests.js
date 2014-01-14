@@ -1,4 +1,4 @@
- 
+
 hiccup [div]
 hiccup [div#foo]
 hiccup [div.bar]
@@ -20,6 +20,10 @@ hiccup [div#foo.bar.baz "text" [p#biz.bus "text2"]]
 hiccup [div#foo.bar.baz [FooBar#biz.bus {bla: "bee", blu: "fooba", className: "secco"} "text2"] "text" 2 1.0]
 hiccup [div#foo.bar.baz [FooBar#biz.bus {bla: "bee"}  "text2"] "text" 2 1.0]
 hiccup [p#biz.bus {bla: "bee"} "text2"] 
+
+hiccup [div `foo
+bar
+baz`]
 
 hiccup [div#foo.bar.baz [FooBar.bus {bla: "bee", blu: "fooba", className: "secco"} "text2"] "text" 2 1.0]
 hiccup [div#id "text" "text2"]
