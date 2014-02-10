@@ -43,32 +43,35 @@ macro _args {
 
   case { $name $x ... } => { 
 
-    var tokens = #{$x ...}.map(function(el) { return unwrapSyntax(el); });
+    var x = #{$x ...};
 
-    var offset = 0;
+    var getIdentifier = function(x) {
+      var identifier = '';
+      while (x.length > 0 && (x[0].token.type == 3 || x[0].token.value == '-')) {
+        identifier += x.shift().token.value;
+      }
+      return identifier;
+    }
 
     var id = "", className = "";
-    if (tokens[0] == '#') {
-      tokens.shift();
-      id = tokens.shift();
-      offset += 2;
+    if (x.length > 0 && x[0].token.value == '#') {
+      x.shift();
+      id = getIdentifier(x);
     }
-    while (tokens[0] == '.') {
-      tokens.shift();
-      className += " " + tokens.shift();
-      offset += 2;
+    while (x.length > 0 && x[0].token.value == '.') {
+      x.shift();
+      className += " " + getIdentifier(x);
     }
 
     var hmap;
-    if (tokens.length > 0 && tokens[0].value == '{}') {
-      hmap = #{$x ...}[offset];
-      offset += 1;
+    if (x.length > 0 && x[0].token.value == '{}') {
+      hmap = x.shift();
     }
 
     letstx $id = [makeValue(id,#{$name})], 
            $c = [makeValue(className,#{$id})];
 
-    var children = #{$x ...}.slice(offset);
+    var children = x;
     letstx $children ... = children;
 
     if (hmap === undefined && children.length == 0) {
