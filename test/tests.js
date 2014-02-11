@@ -27,6 +27,19 @@ hiccup [div `foo
 bar
 baz`]
 
+hiccup [div#foo-bar "text"]
+hiccup [div#foo--bar "text"]
+hiccup [div#foo-bar5bar "text"]
+hiccup [div#foo-bar5bar2 "text"]
+hiccup [div.foo-bar "text"]
+hiccup [div.foo--bar "text"]
+hiccup [div.foo-bar5bar "text"]
+hiccup [div.foo-bar5bar2 "text"]
+hiccup [div#foo-bar.foo-bar "text"]
+hiccup [div#foo--bar.foo--bar "text"]
+hiccup [div#foo-bar5bar.foo-bar5bar "text"]
+hiccup [div#foo-bar5bar2.foo-bar5bar2 "text"]
+
 hiccup [div#foo.bar.baz [FooBar.bus {bla: "bee", blu: "fooba", className: "secco"} "text2"] "text" 2 1.0]
 hiccup [div#id "text" "text2"]
 
