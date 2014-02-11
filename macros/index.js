@@ -15,7 +15,7 @@ macro _tag {
     var knownTags = {
       a:true, abbr:true, address:true, area:true, article:true, aside:true, audio:true, 
       b:true, base:true, bdi:true, bdo:true, big:true, blockquote:true, body:true, br:true, 
-      butto:true, canva:true, caption:true, cite:true, code:true, col:true, colgroup:true, 
+      button:true, canvas:true, caption:true, cite:true, code:true, col:true, colgroup:true, 
       data:true, datalist:true, dd:true, del:true, details:true, dfn:true,
       div:true, dl:true, dt:true, em:true, embed:true, fieldset:true, figcaption:true, 
       figure:true, footer:true, form:true, h1:true, h2:true, h3:true, h4:true, h5:true, h6:true,
