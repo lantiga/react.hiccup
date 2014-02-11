@@ -47,7 +47,12 @@ macro _args {
 
     var getIdentifier = function(x) {
       var identifier = '';
-      while (x.length > 0 && (x[0].token.type == 3 || x[0].token.value == '-')) {
+      var pend = null;
+      while (x.length > 0 
+          && (pend == null || x[0].token.range === undefined || pend == x[0].token.range[0]) 
+          && x[0].token.type != 11
+          && x[0].token.value != '.') {
+        pend = x[0].token.range === undefined ? x[0].token.start : x[0].token.range[1];
         identifier += x.shift().token.value;
       }
       return identifier;
