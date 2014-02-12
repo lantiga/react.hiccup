@@ -27,6 +27,20 @@ hiccup [div `foo
 bar
 baz`]
 
+hiccup [div [div#foo-bar "text"]]
+hiccup [div [div#foo--bar "text"]]
+hiccup [div [div#foo-bar5bar "text"]]
+hiccup [div [div#foo-bar5bar2 "text"]]
+hiccup [div [div.foo-bar "text"]]
+hiccup [div [div.foo--bar "text"]]
+hiccup [div [div.foo-bar5bar "text"]]
+hiccup [div [div.foo-bar5bar2 "text"]]
+hiccup [div [div#foo-bar.foo-bar "text"]]
+hiccup [div [div#foo--bar.foo--bar "text"]]
+hiccup [div [div#foo-bar5bar.foo-bar5bar "text"]]
+hiccup [div [div#foo-bar5bar2.foo-bar5bar2 "text"]]
+
+
 hiccup [div#foo-bar "text"]
 hiccup [div#foo--bar "text"]
 hiccup [div#foo-bar5bar "text"]

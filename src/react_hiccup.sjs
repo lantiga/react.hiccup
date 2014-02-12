@@ -45,14 +45,18 @@ macro _args {
 
     var x = #{$x ...};
 
+    var getRange = function(token) {
+      return token.sm_startRange || token.sm_range || token.startRange || token.range;
+    }
+
     var getIdentifier = function(x) {
       var identifier = '';
       var pend = null;
       while (x.length > 0 
-          && (pend == null || x[0].token.range === undefined || pend == x[0].token.range[0]) 
+          && (pend == null || getRange(x[0].token) === undefined || pend == getRange(x[0].token)[0]) 
           && x[0].token.type != 11
           && x[0].token.value != '.') {
-        pend = x[0].token.range === undefined ? x[0].token.start : x[0].token.range[1];
+        pend = getRange(x[0].token)[1];
         identifier += x.shift().token.value;
       }
       return identifier;
@@ -67,7 +71,7 @@ macro _args {
       x.shift();
       className += " " + getIdentifier(x);
     }
-
+    
     var hmap;
     if (x.length > 0 && x[0].token.value == '{}') {
       hmap = x.shift();
