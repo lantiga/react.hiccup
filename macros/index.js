@@ -157,8 +157,8 @@ macro hiccup {
 }
 
 macro rclass {
-  rule { $n.$m(.)... = $o:expr } => { $n.$m(.)... = React.createClass($o); }
-  rule { $n:ident = $o:expr } => { var $n = React.createClass($o); }
+  rule { $n.$m(.)... = {$x...} } => { $n.$m(.)... = React.createClass({$x...}); }
+  rule { $n:ident = {$x...} } => { var $n = React.createClass({$x...}); }
 }
 
 export hiccup;
